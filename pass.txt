@@ -1,0 +1,4 @@
+U1Fi7x9aCxlxPKPK . pass
+23bey10050  . username
+
+mongodb+srv://23bey10050:U1Fi7x9aCxlxPKPK@login.rywzk.mongodb.net/

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the video cover the entire background */
+  z-index: -1; /* This places the video behind other elements */
+}
+
+.container {
+    width: 90%; /* Use a percentage for width */
+    max-width: 400px; /* Keep a max-width for larger screens */
+    background-color: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin: 90px; /* Align to the left */
+    padding: 10px; /* Adjust padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: slideIn 1s ease-out forwards;
+    left: 0; /* Align to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%; /* Increase width on smaller screens */
+      padding: 15px; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100%; /* Full width on very small screens */
+      padding: 10px; /* Reduce padding */
+      top: 20%; /* Adjust vertical position */
+      transform: translateY(0); /* Remove vertical centering */
+    }
+  }
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Added text shadow */
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 40px;
+  outline: none;
+  transition: border 0.3s;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+}
+
+input:focus {
+  border-color: #6a11cb;
+}
+
+label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #11cbbf;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Added text shadow */
+}
+
+button:hover {
+  background: #2575fc;
+}
+
+.divider {
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.google-btn {
+  background-color: #db4437; /* Google red */
+  color: white;
+}
+
+.google-btn:hover {
+  background-color: #c1352e; /* Darker red on hover */
+}
+
+.social-list-title {
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+
+.social-link {
+  margin: 0 10px;
+}
+
+.social-link ion-icon {
+  font-size: 24px;
+  color: #333;
+}
+
+.social-link:hover ion-icon {
+  color: #6a11cb; /* Change color on hover */
+}
+
